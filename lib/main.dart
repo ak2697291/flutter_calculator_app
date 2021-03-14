@@ -130,7 +130,7 @@ class _CalculatorState extends State<Calculator> {
                       Parser p =Parser();
                       Expression exp = p.parse(equation);
                       ContextModel cm = ContextModel();
-                      equation =String.parse(exp.evaluate(EvaluationType.REAL, cm));
+                      equation =exp.evaluate(EvaluationType.REAL, cm).toString();
                     });
                   },
                   color: Colors.grey[300],
